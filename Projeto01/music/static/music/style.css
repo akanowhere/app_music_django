@@ -1,0 +1,31 @@
+body {
+
+   
+   background: white url("images/271590_screenshots_20200717202702_1.jpg");
+   background-size: cover;
+}
+
+ul.errorlist {
+    padding-left: 0;
+}
+
+ul.errorlist > li {
+    list-style: none;
+}
+
+.navbar {
+    border-radius: 0;
+}
+
+.navbar-brand {
+    font-family: 'Satisfy', cursive;
+}
+
+.glyphicon-star {
+    color: #CCCCCC;
+    font-size: 16px;
+}
+
+.glyphicon-star.active {
+    color: #FDB230;
+}

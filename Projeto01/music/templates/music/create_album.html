@@ -1,0 +1,53 @@
+{% extends 'music/base.html' %}
+{% block title %}Adicionar Novo Album{% endblock %}
+{% block albums_active %}active{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <div class="col-sm-12 col-md-7">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Adicionar Novo Album</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'music/form_template.html' %}
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-sm-12 col-md-5">
+            <div class="panel panel-default">
+                <div class="panel-body">
+
+
+                    <p>ESTA APLICACAO PERMITE QUE VOCE FACA UPLOADS DE MUSICA E FAZER STORES DOS MESMOS</p>
+                    <h3>COMO POSSO FAZER UPLOADS ?</h3>
+                    <p>PRIMEIRO CRIA UM NOVO ALBUM ,PREENCHENDO O FORMULARIO NESTA PAGINA . UMA VEZ O ALBUM CRIADO VC ESTARA LIBERADO PARA ADICIONAR SONS</p>
+                    <h3>ALBUNS LOGOS?</h3>
+                    <ul>
+                        <li>LOGO TEM QUE SER DE RESOLUCAOES DE 512x512</li>
+                        <li>FORMATOS DAS IMAGENS: .JPG, .GIF, OU .PNG</li>
+                        <li>TAMANHO LIMITADO DAS IMAGENS: 2MB </li>
+                        <li>DE PREFERENCIA IMAGENS QUADRADAS</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+{% endblock %}
